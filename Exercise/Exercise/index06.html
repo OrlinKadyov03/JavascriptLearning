@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleAmazon.css">
+</head>
+<body>
+    <p>Amazon Shipping Calculator</p>
+
+    <p>Orders under $40 = + $10 shipping.</p>
+
+    <p>Orders over $40 = FREE shipping.</p>
+
+    <input  placeholder="Cost of order" class="js-input cost" onkeydown="handleCostKeydown()">
+
+    <button class="btn" onclick="Order()">Calculate</button>
+
+    <p class="js-result"></p>
+
+    <p class="js-error error"></p>
+</body>
+</html>
+
+<script>
+    function handleCostKeydown(){
+        if(event.key === 'Enter'){
+        Order()
+    }
+}
+    const inputElement = document.querySelector('.js-input')
+    function Order(){
+
+        document.querySelector('.js-result').innerHTML= `` 
+
+        document.querySelector('.js-error').innerHTML = ``
+   
+     let cons = Number(inputElement.value);
+     if(cons < 0){
+        document.querySelector('.js-error').innerHTML = `Error: cost cannot be less than $0` 
+        return       
+     } 
+     if(cons < 40){
+        cons = cons + 10
+        document.querySelector('.js-result').innerHTML = `$${cons}`
+     }
+
+  }  
+   
+</script>

@@ -1,0 +1,16 @@
+.cost{
+    font-size: 15px;
+    padding: 10px;
+}
+.btn{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 12px 15px;
+}
+.error{
+    color: red;
+}

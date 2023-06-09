@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <button class="js-button" onclick="set()">Start</button>
+    <button class="js-add" onclick="setInterval()">Add</button>
+    <p class="display"></p>
+
+    <button onclick="message++">Add</button>
+    <button onclick="message--">Remove</button>
+</body>
+</html>
+
+<script>
+
+/*let add = function(){
+    console.log(2 + 3)
+}
+add()
+add()
+*/
+
+
+/*function runTwice(fun){
+  fun()
+  fun()
+}
+
+runTwice(function() {
+    console.log('12b')
+})*/
+
+
+
+/*function set(){
+const setTime = document.querySelector('.js-button')
+setTimeout(() => {
+    return setTime.innerHTML = '...Loading'
+}, 0000) ;
+setTimeout(() =>{
+    return setTime.innerHTML = 'Finished'
+    },1000)
+}*/
+
+
+/*function AddToCard(){
+    let addToTwo
+    const addTo = document.querySelector('.display')
+    addTo.innerHTML = 'Added'
+   
+    clearTimeout(addToTwo)
+    addToTwo = setTimeout(() => {
+         addTo.innerHTML = ' '
+    }, 2000);
+}
+*/
+
+let message = 2
+
+setInterval(function(){
+    if(document.title === 'App'){
+        document.title === `${message} New message`
+    } else{
+        document.title = 'App'
+    }
+},1000)
+
+
+</script>
